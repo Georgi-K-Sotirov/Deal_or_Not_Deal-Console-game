@@ -164,9 +164,6 @@ player_box = f"box_{player_box}"
 player_box = globals()[player_box]
 
 
-
-
-
 box_draw(6)
 
 offer_from_banker()
