@@ -47,6 +47,7 @@ def box_draw(number):
 
 
 def offer_from_banker():
+
     print()
     print("Now is time to hear the offer from our banker.")
     print()
