@@ -15,7 +15,17 @@ def box_draw(number):
         print(f"You can choose from the following boxes:")
         print(", ".join(map(str, box_pool)))
 
-        box_choice = int(input(f"Please select box number {num}: "))
+        accepted_choice = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17",
+                           "18", "19", "20", "21", "22", "23", "24")
+        box_choice = (input(f"Please select box number {num}: "))
+        if box_choice not in accepted_choice:
+            print("Invalid box number!")
+            print("Try again!")
+            print()
+            print()
+            print(50 * "*")
+            continue
+        box_choice = int(box_choice)
         if box_choice not in box_pool:
             print("Invalid box number!")
             print("Try again!")
@@ -41,7 +51,7 @@ def offer_from_banker():
     print("Now is time to hear the offer from our banker.")
     print()
 
-    offer = total_money_in_the_game / (len(box_pool)+1)
+    offer = total_money_in_the_game / (len(box_pool) + 1)
 
     print(50 * "*")
     print()
@@ -162,7 +172,6 @@ player_box = int(player_box)
 box_pool.remove(player_box)
 player_box = f"box_{player_box}"
 player_box = globals()[player_box]
-
 
 box_draw(6)
 
