@@ -197,7 +197,6 @@ print()
 print(50 * "*")
 print()
 
-print(len(box_pool))
 
 # winning the chosen box
 print()
@@ -210,3 +209,5 @@ print()
 print(50 * "*")
 print()
 print(f"In your box was the amount of {player_box} leva.")
+print()
+print("Thanks for playing!")
